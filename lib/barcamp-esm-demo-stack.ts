@@ -93,40 +93,6 @@ export class BarcampEsmDemoStack extends Stack {
     }))
     */
 
-
-    /**
-     * EFO
-     */
-    /** Step 1.0 */
-    /*
-    const enhancedConsumer = new kinesis.CfnStreamConsumer(this, 'EnhancedConsumer', {
-      consumerName: 'barcamp-stream-consumer',
-      streamArn: stream.streamArn
-    })
-    */
-
-    /** Step 1.1: IAM policy */
-    /*
-    const enhancedConsumerPolicy = new iam.PolicyStatement({
-      resources: [enhancedConsumer.attrConsumerArn],
-      actions: ['kinesis:SubscribeToShard'],
-    })
-
-    consumer.addToRolePolicy(enhancedConsumerPolicy)
-    */
-
-    /** Step 1.2: ESM */
-    /*
-    new lambda.EventSourceMapping(this, 'EventSourceMapping', {
-      batchSize: 10000,
-      startingPosition: lambda.StartingPosition.LATEST,
-      eventSourceArn: enhancedConsumer.attrConsumerArn,
-      target: consumer,
-    })
-    */
-   /** EFO */
-
-
     // CloudWatch Dashboard
     const dashboard = new cloudwatch.Dashboard(this, 'BarCampDashboard', {
       dashboardName: 'BarCamp'
