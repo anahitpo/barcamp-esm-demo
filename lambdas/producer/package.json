@@ -1,0 +1,16 @@
+{
+  "name": "producer",
+  "version": "1.1.0",
+  "description": "Lambda function to write records to a Kinesis Stream",
+  "main": "producer.js",
+  "scripts": {
+  },
+  "author": "Anahit",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.zipwith": "^4.2.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.1396.0"
+  }
+}
