@@ -83,6 +83,19 @@ export class BarcampEsmDemoStack extends Stack {
     }))
     */
 
+    /** Filtering */
+    /*
+    consumer.addEventSource(new eventSources.KinesisEventSource(stream, {
+      startingPosition: lambda.StartingPosition.LATEST,
+      filters: [
+        lambda.FilterCriteria.filter(
+          {
+            partitionKey: lambda.FilterRule.isEqual('2')
+          }
+        )
+       ]
+    }))
+    */
 
     /** Tumbling window */
     /*
