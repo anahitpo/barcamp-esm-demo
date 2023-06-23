@@ -8,7 +8,7 @@ let failureSequenceNumber
 const poisonPill = (kinesisRecord) => {
   if (kinesisRecord.partitionKey === '1') {
     failureSequenceNumber = kinesisRecord.sequenceNumber
-    throw new Error('This is a poson pill!')
+    throw new Error('This is a poison pill!')
   }
 }
 
